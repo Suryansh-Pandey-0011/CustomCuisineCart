@@ -1,0 +1,203 @@
+:root{
+    --primary-background : #E6DFCE;
+    --secondary-background : white;
+    --navbar-background: #F1D6BB;
+    --primary-font-color : #81523F;
+    --primary-border-color : #81523F;
+    --primary-font: "Protest Riot", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--primary-background);
+}
+body>h1{
+    margin: 20px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-up{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--navbar-background);
+    height: 75px;
+    padding: 0px 10px;
+}
+.navbar-up h1{
+    font-family: var(--primary-font);
+    color: var(--primary-font-color);
+}
+.search-box{
+    height: 40px;
+    max-width: 500px;
+    width: 50vw;
+    min-width: 100px;
+    border: 2px solid var(--primary-border-color);
+    border-radius: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--secondary-background);
+}
+.search-box input{
+    height: 100%;
+    width: calc(100% - 32px);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: center;
+}
+.search-box input::placeholder{
+    font-size: 17px;
+}
+.search-box button{
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+    overflow: visible;
+    /* filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.493)); */
+    transition: 0.1s ease;
+}
+.search-box button:hover{
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+.nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5px;
+    border: 2px solid var(--primary-border-color);
+    border-radius: 30px;
+    padding: 5px 10px 5px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.user img{
+    height: 50px;
+    border-radius: 25px;
+}
+.navbar-up>i{
+    font-size: 20px;
+}
+.navbar-down{
+    height: 40px;
+    width: 100vw;
+    border-top: 2.5px solid var(--primary-border-color);
+    border-bottom: 2.5px solid var(--primary-border-color);
+    border-right: 2.5px solid var(--primary-border-color);
+    background-color: var(--navbar-background);
+}
+.navbar-down>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    list-style-type: none;
+    height: 100%;
+}
+.navbar-down>ul>li{
+    border-left: 2.5px solid var(--primary-border-color);
+    height: 100%;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border: 3px solid var(--primary-border-color);
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+    background-color: var(--navbar-background);
+    width: 60%;
+    margin-bottom: 20px;
+}
+.card > img{
+    height: 250px;
+    width: 250px;
+    border-radius: 15px;
+}
+.card .des{
+    height: 250px;
+    padding: 20px 0px;
+    position: relative;
+    width: 100%;
+}
+.card .des > h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: #81523F;
+}
+.card .des > p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card .des > form{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.card .des > form > button{
+    width: 100% ;
+    padding: 5px;
+    background-color: transparent;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid #81523F;
+    transition: 0.3s ease;
+}
+.card .des > form > button:hover{
+    background-color: #81523F;
+    color: white;
+}
+.quantity-wrapper > button{
+    padding: 5px;
+    width: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: var(--primary-border-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s ease;
+}
+.quantity-wrapper > button:hover{
+    transform: scale(1.2);
+}
+.quantity-wrapper > input{
+    padding: 5px;
+    text-align: center;
+    width: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    border:2px solid var(--primary-border-color);
+    border-radius: 10px;
+}
