@@ -33,8 +33,8 @@
         </div>
         <div class="dropdown-menu">
             <ul>
-                <li><a href="#hero_section_i"  id="active"><i class="bi bi-house"></i>Home</a></li>
-                <li id="sc"><a href="#WhyChooseUs_Section_i"><i class="bi bi-question-circle"></i>  Why Us</a></li>
+                <li><a href="#hero_section_i"  id="active">Home</a></li>
+                <li id="sc"><a href="#WhyChooseUs_Section_i">Why Us</a></li>
                 <li><a href="#review_section_i">Reviews</a></li>
                 <li><a href="#footer_i">Contact</a></li>
                 <li><a href="/sign-up" id="Sign_up_btn_d">Sign Up</a></li>
@@ -45,6 +45,11 @@
         <div class="hero-section-container">
             <div class="login-side">
                 <form action="/login" method="POST" style="width: 100%;">
+                    <center>
+                        <% if (typeof error !== 'undefined') { %>
+                            <p style="color: rgb(255, 255, 255);"><%= error %></p>
+                        <% } %>
+                    </center>
                     <input type="text" name="username" id="username" placeholder="Username" class="text_input">
                     <input type="password" name="password" id="password" placeholder="Password" class="text_input">
                     <!-- <div>
@@ -64,6 +69,7 @@
                         </div>
                 </a>
                 <p id="sign_up_here">Not a member yet? <a href="/sign-up">Sign Up here</a></p>
+                <p id="sign_up_here">Are you the admin? <a href="/admin-login">Sign In here</a></p>
                 <button id="Login_from_login">Show Slider</button>
             </div>
             <div class="slider-side">

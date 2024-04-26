@@ -17,6 +17,12 @@
 
             <input type="text" id="username" name="username" placeholder="Username"><br>
 
+            <center>
+                <% if (typeof error !== 'undefined') { %>
+                    <p style="color: rgb(68, 23, 23); text-shadow: 0px 0px 5px red;"><%= error %></p>
+                <% } %>
+            </center>
+
             <input type="password" id="password" name="password" placeholder="Password"><br>
 
             <input type="email" id="email" name="email" placeholder="Email (optional)"><br>

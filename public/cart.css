@@ -1,0 +1,108 @@
+:root{
+    --primary-background : #E6DFCE;
+    --secondary-background : white;
+    --navbar-background: #F1D6BB;
+    --primary-font-color : #81523F;
+    --primary-border-color : #81523F;
+    --primary-font: "Protest Riot", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: url("Assets/Signup-Images/SignUp-Background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-up{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(241, 214, 187, 0.3);
+    backdrop-filter: blur(10px);
+    height: 75px;
+    padding: 0px 10px;
+    border-bottom: 2px solid #81523F;
+}
+.navbar-up h1{
+    font-family: var(--primary-font);
+    color: var(--primary-font-color);
+}
+#toDashboard{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--primary-background);
+    border: 3px solid var(--primary-border-color);
+    color: var(--primary-font-color);
+    font-family: sans-serif;
+    transition: 0.3s ease;
+}
+#toDashboard:hover{
+    background-color: var(--primary-border-color);
+    color: white;
+}
+.contain{
+    padding: 30px 20px;
+    background-color: rgba(241, 214, 187, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid #81523F;
+    border-radius: 10px;
+    width: 90vw;
+    max-width: min-content;
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contain>h2{
+    font-family: sans-serif;
+    font-size: 35px;
+    text-decoration: underline;
+    color: #503227;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.cart-items > table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90vw;
+    max-width: 500px;
+    font-size: 15px;
+}
+th, td{
+    border: 2px solid #503227;
+    text-align: center;
+    padding: 10px 20px;
+}
+tr:nth-child(1){
+    background-color: #81523F;
+    color: white;
+}
+#sub-btn{
+    padding: 5px;
+    max-width: 70vw;
+    width: 500px;
+    margin: 10px;
+    height: 40px;
+    background-color: #503227;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    outline: none;
+    text-align: center;
+    transition: 0.3s ease;
+}

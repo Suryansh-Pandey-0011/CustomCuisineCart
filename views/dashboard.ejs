@@ -10,20 +10,21 @@
 <body>
     <div class="navbar-up">
         <h1>Custom Cuisine Cart</h1>
-        <div class="search-box">
-            <input type="text" name="Search" id="search" placeholder="Find my meal">
-            <button type="submit"><img src="/Assets/Dashboard-Images/Search Icon.svg" alt="Search"></button>
-        </div>
+        <form class="search-box" action="/search" method="get">
+          <input type="text" name="q" id="search" placeholder="Find my meal">
+          <button type="submit"><img src="/Assets/Dashboard-Images/Search Icon.svg" alt="Search"></button>
+      </form>      
         <div class="nav-right">
             <div class="user">
                 <img src="/Assets/Dashboard-Images/baby_girl_user_icon_6821368.webp" alt="User_logo">
                 <div class="user_d">
                     <p>Hello</p>
-                    <h2>User</h2>
+                    <h2><%= existingUser.firstName %></h2>
                 </div>
             </div>
-            <i class="fa-regular fa-heart" id="heart" style="color: red; font-size: 30px;"></i>
-            <i class="fa-solid fa-cart-shopping" style="color: #81523F; font-size: 30px;"></i>
+            <!-- <i class="fa-regular fa-heart" id="heart" style="color: red; font-size: 30px;"></i> -->
+            <a href="/cart" id="cart"><i class="fa-solid fa-cart-shopping" style="color: #81523F; font-size: 30px;"></i></a>
+            <a href="/logout" id="logout">Logout</a>
         </div>
     </div>
     <div class="navbar-down">
@@ -44,15 +45,15 @@
               <img src="<%= foodItem.image %>" alt="<%= foodItem.name %>">
               <div class="des">
                 <h3><%= foodItem.name %></h3>
-                <p>"Description Here."</p>
                 <p>Rs <%= foodItem.price.toFixed(2) %></p>
-                <form>
+                <form action="/addtocart" method="POST">
                   <div class="quantity-wrapper">
                     <button type="button" class="decrease">-</button>
+                    <input type="text" class="name" name="name" value="<%= foodItem.name %>" style="display: none;">
                     <input type="number" inputmode="numeric" class="quantity" name="quantity" value="1" min="1">
                     <button type="button" class="increase">+</button>
                   </div>
-                  <button type="submit">Order</button>
+                  <button type="submit">Add To Cart</button>
                 </form>
               </div>
             </div>

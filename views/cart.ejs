@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>Shopping Cart</title>
+</head>
+<body style="height: 100vh;"">
+    <div class="navbar-up">
+        <h1>Custom Cuisine Cart</h1>
+        <a href="/dashboard" id="toDashboard">Dashboard</a>
+    </div>
+    <!-- Cart content -->
+    <div class="contain">
+        <h2>Shopping Cart</h2>
+        <div class="cart-items">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                  </tr>
+                  <% cartItems.forEach(item => { %>
+                  <tr>
+                    <form action="/deletefromcart" method="get"><input type="text" name="name" id="name" value="<%= item.name %>" style="display: none;">
+                    <td><%= item.name %></td>
+                    <td><%= item.quantity %></td>
+                    <td>Rs <%= item.price %></td>
+                    <td><button type="submit">Remove</button></td>
+                    </form>
+                  </tr>
+                  <% }) %>
+                  <tr>
+                    <td colspan="2">Total</td>
+                    <td>Rs: <%= totalPrice.toFixed(2) %></td>
+                    <td>-</td>
+                  </tr>
+            </table>
+            <button id="sub-btn">Proceed to checkout</button>
+        </div>
+    </div>
+</body>
+</html>
